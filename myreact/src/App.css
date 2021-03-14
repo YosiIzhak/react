@@ -66,3 +66,18 @@
   left: 5px;
   background-color: red;
 }
+.quiz{
+  height: 30vh;
+  width: 30vw;
+  border: solid 2px palevioletred;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+  

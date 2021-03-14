@@ -4,15 +4,18 @@ import './App.css';
 // import Sum from './components/2.2/2.2';
 //  import Length from './components/2.2/2.2';
 import Boxes from './components/boxes 3.1/3.1'
+import Quiz from './components/Quiz 3.2/3.2';
 function App() {
   return (
    
    <div className="App">
-        {/* <Interpolation> </Interpolation> */}
+       
+       <Quiz></Quiz> 
+       {/* <Interpolation> </Interpolation> */}
         {/* <Sum></Sum> */}
         {/* <Length></Length> */}
-        <Boxes></Boxes>
-      <header className="App-header">
+        {/* <Boxes></Boxes> */}
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -25,7 +28,8 @@ function App() {
         >
           Click Me
         </a>
-      </header>
+      </header> */}
+
     </div>
   );
 }
