@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+.box1{
+  position: relative;
+  height: 30vh;
+  width: 60vw;
+  background-color: purple;
+}
+.box2{
+ position: absolute;
+ top:5px;
+ left:5px;
+ height: 20vh;
+  width: 55vw;
+  background-color: paleturquoise;
+}
+.box3{
+  position: absolute;
+  height: 15vh;
+  top:5px;
+  left: 5px;
+  width: 50vw;
+  background-color:pink ;
+}
+.box4{
+  margin: 2vh;
+  height: 5vh;
+  width: 40vw;
+  top:5px;
+  left: 5px;
+  background-color: red;
+}

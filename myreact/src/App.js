@@ -2,14 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 //import Interpolation from './components/2.2/2.2';
 // import Sum from './components/2.2/2.2';
- import Length from './components/2.2/2.2';
+//  import Length from './components/2.2/2.2';
+import Boxes from './components/boxes 3.1/3.1'
 function App() {
   return (
    
    <div className="App">
         {/* <Interpolation> </Interpolation> */}
         {/* <Sum></Sum> */}
-        <Length></Length>
+        {/* <Length></Length> */}
+        <Boxes></Boxes>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
