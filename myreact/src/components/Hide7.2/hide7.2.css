@@ -1,0 +1,12 @@
+.box{
+    height: 8vw;
+    width: 18vh;
+    background-color: coral;
+    margin-top: 1vh;
+
+}
+.App{
+    border:1px solid black;
+    width: 10vw;
+    height: 20vh;
+}
