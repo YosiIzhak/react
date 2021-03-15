@@ -1,35 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
-//import Interpolation from './components/2.2/2.2';
-// import Sum from './components/2.2/2.2';
-//  import Length from './components/2.2/2.2';
-import Boxes from './components/boxes 3.1/3.1'
-import Quiz from './components/Quiz 3.2/3.2';
+
+ //import Button from './components/buttons 4.1/4.1'
+import Card from './components/Cards4.2/card';
+
 function App() {
   return (
-   
+  //  <div>
+  //   <Button weight={700}>important</Button>
+  //   <Button weight={300}>noImportant</Button>
+  //   </div>
    <div className="App">
-       
-       <Quiz></Quiz> 
-       {/* <Interpolation> </Interpolation> */}
-        {/* <Sum></Sum> */}
-        {/* <Length></Length> */}
-        {/* <Boxes></Boxes> */}
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click Me
-        </a>
-      </header> */}
-
+      <Card
+      source={'https://picsum.photos/200'}
+        title={'myPic'}
+      description={'pic1'}
+        share={'https://picsum.photos/200'}
+          explore={'abcd'}
+          />
+  <Card
+      source={'https://picsum.photos/100'}
+        title={'secPic'}
+      description={'pic2'}
+        share={'https://picsum.photos/100'}
+          explore={'abcd'}
+          />
+           <Card
+      source={'https://picsum.photos/120'}
+        title={'morePic'}
+      description={'pic3'}
+        share={'https://picsum.photos/120'}
+          explore={'abcd'}
+          />
     </div>
   );
 }
