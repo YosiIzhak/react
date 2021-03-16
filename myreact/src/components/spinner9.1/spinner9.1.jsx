@@ -1,19 +1,19 @@
 import React from 'react'
-import './change8.3.css'
-class Change extends React.Component {
+import './spinner9.1.css'
+class Spinner extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            color: ""
+            show: true
         }
     }
     componentDidMount() {
         console.log("[componentDidMount]")
         setTimeout(() => {
-            this.setState({color: this.state.color })
+            this.setState({show: !this.state.show })
         }, 5000)
-        console.log(this.state.color)
+      
     }
 
     // componentDidUpdate() {
@@ -27,10 +27,10 @@ class Change extends React.Component {
     render() {
         return (
             <div className="App">
-                <div>
+                <div className="body">
                     {
-                       
-                       <div className="box"></div>
+                      this.state.show ? <div className="loader"></div> : null
+                     
                     }
                 </div>
 
@@ -38,4 +38,4 @@ class Change extends React.Component {
         );
     }
 }
-export default Change;
+export default Spinner;
