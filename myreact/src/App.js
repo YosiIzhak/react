@@ -1,14 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
 
-import Box from './components/animation8.2/animation8.2'
+import Change from './components/change8.3/change8.3'
 function App() {
   return (
   
    <div>
-      <Box height="100px" width="100px"  />
-      <Box height="50px" width="50px"  />
-      <Box height="80px" width="80px"  />
+      <Change height="100px" width="100px"  />
+     
    </div>
   );
 }
