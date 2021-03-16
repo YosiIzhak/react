@@ -1,0 +1,24 @@
+@keyframes move{
+  from{
+    top:0px;
+    left:0px;
+    border-color:blue;
+    border-style:solid;
+    border-width:thick;
+  }
+  to{
+    top:0;
+    left:400px;
+     border-color:blue;
+    border-style:solid;
+    border-width:thick;
+  }
+  
+}
+
+
+.box{
+  position:relative;
+  background-color:blue;
+  animation: move 4s;
+}
