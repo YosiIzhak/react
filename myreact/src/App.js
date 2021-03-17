@@ -1,21 +1,35 @@
 //import logo from './logo.svg';
-import * as React from "react";
+import React, { Component } from 'react'
 import './App.css';
 
-import Spinner from './components/spinner9.1/spinner9.1'
-function App() {
-  const [counter, setCounter] = React.useState(5);
-  React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-  }, [counter]);
+import ColorButton from './components/child11.1/child11.1'
+class App extends Component {
 
-  return (
-   
-   <div>
-      <Spinner  />
-      <div><h1>Countdown: {counter}</h1></div>
-   </div>
-  );
+  state = {
+    Colors: ['blue', 'red', 'yellow'],
+    color: ''
+  }
+
+  ParentColorHandler = (e) => {
+    this.setState({
+      color: e
+    })
+  }
+  render() {
+    return (
+      <div>
+        {
+          this.state.Colors.map((p, index) => {
+            return <ColorButton color={p} key={index} ParentColorHandler={this.ParentColorHandler} />
+          })
+        }
+
+        <div className={"box " + this.state.color}>
+
+        </div>
+
+      </div>
+    )
+  }
 }
-
 export default App;
