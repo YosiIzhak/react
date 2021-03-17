@@ -2,34 +2,34 @@
 import React, { Component } from 'react'
 import './App.css';
 
-import ColorButton from './components/child11.1/child11.1'
+import CheckBox from './components/check11.2/check11.2'
 class App extends Component {
-
-  state = {
-    Colors: ['blue', 'red', 'yellow'],
-    color: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      terms: [
+        { id: 1, value: "i read", checked: false },
+        { id: 2, value: "i accept", checked: false },
+        { id: 3, value: "yes", checked: true },
+        { id: 4, value: "no", checked: true }
+      ]
+     
+    }
   }
 
-  ParentColorHandler = (e) => {
-    this.setState({
-      color: e
-    })
-  }
+  
+
   render() {
     return (
       <div>
         {
-          this.state.Colors.map((p, index) => {
-            return <ColorButton color={p} key={index} ParentColorHandler={this.ParentColorHandler} />
+          this.state.terms.map((p) => {
+            return <CheckBox key={p.id} value={p.value} checked={p.checked} />
           })
         }
 
-        <div className={"box " + this.state.color}>
-
-        </div>
-
       </div>
-    )
+    );
   }
 }
-export default App;
+export default App
