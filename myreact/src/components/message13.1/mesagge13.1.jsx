@@ -9,7 +9,7 @@ export default class Data extends react.Component {
         this.state = {
             persons: data.data,
             names: [],
-            before: []
+            mybefore: []
         }
 
     }

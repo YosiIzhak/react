@@ -1,9 +1,9 @@
 import react from 'react';
 //import axios from 'axios';
 export default class Card extends react.Component {
-    constructor(props) {
+      constructor(props) {
         super(props);
-        state = {
+         this.state = {
             favoriteFoods: this.props.favoriteFoods,
             meats: [],
             fish: []
