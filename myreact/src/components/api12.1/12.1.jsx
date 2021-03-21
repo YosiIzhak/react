@@ -16,9 +16,9 @@ export default class Api extends react.Component {
         this.setState({ categories: request.data })
 
     }
-    CategorySelectHandler = (p) => {
+    CategorySelect = (e) => {
         this.setState({
-            term: p.target.value
+            term: e.target.value
         })
     }
     getJoke = async () => {
@@ -28,25 +28,26 @@ export default class Api extends react.Component {
         }
         else {
             cat = await axios.get('https://api.chucknorris.io/jokes/random?category=${this.state.term}')
-         }
-         this.setState({
-            joke:cat.data.value
+        }
+        this.setState({
+            joke: cat.data.value
         })
     }
 
 
     render() {
-        return (<div>
-            <button onClick={this.getJoke}>click me</button>
-            <select name="" id="" onChange={this.CategorySelectHandler}>
-                {
-                    this.state.categories.map((x) => {
-                        return <option value={x} key={x}>{x}</option>
-                    })
-                }
-            </select>
-            <p>{this.state.joke}</p>
-        </div>
+        return (
+            <div>
+                <button onClick={this.getJoke}>click me</button>
+                <select name="" id="" onChange={this.CategorySelect}>
+                    {
+                        this.state.categories.map((x) => {
+                            return <option value={x} key={x}>{x}</option>
+                        })
+                    }
+                </select>
+                <p>{this.state.joke}</p>
+            </div>
         )
     }
 }
