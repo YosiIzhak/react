@@ -5,7 +5,7 @@ import './App.css';
 
 //import User from './components/avatar13.2/avatar13.2'
 //import Data from './components/message13.1/mesagge13.1'
-import Ref from './components/ref14.1/ref14.1'
+import Copy from './components/copy14.2/copy14.2'
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-             <Ref/>
+             <Copy/>
            
       </div>
     );
