@@ -1,18 +1,12 @@
-import react from 'react';
-//import axios from 'axios';
-export default class Names extends react.Component {
-    constructor(props) {
-        super(props);
-    }
+import React, { Component } from 'react'
+
+export default class Name extends Component {
 
     render() {
-
-
         return (
             <div>
-            {this.props.names}
+                <p>{this.props.name}</p>
             </div>
         )
-
     }
 }

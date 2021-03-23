@@ -1,63 +1,34 @@
-import react from 'react';
-//import axios from 'axios';
+import React, { Component } from 'react'
 import data from './data'
 import Name from './name13.1'
 import Card from './card13.1'
-export default class Data extends react.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            persons: data.data,
-            names: [],
-            mybefore: []
-        }
 
-    }
+export default class DataMassaging extends Component {
+     state = {data: data.data}
+    //state = {data}
 
-    componentDidMount() {
-        console.log(this.state.persons)
-        this.names()
-        console.log(this.state.names)
-        this.before()
-        console.log(this.state.before)
-
-    }
-    before = () => {
-
-        const mybefore = this.state.persons.filter(x => {
-            return x.birthday.split('').slice(-2).join('') < 90
-
-        })
-        this.setState({ names: mybefore })
-    }
     names = () => {
-
-        const name = this.state.persons.map(x => {
-
-            return x.name
-        })
-        this.setState({ names: name })
-
+        console.log(this.state.data.map(person=> person.name));
+        return this.state.data.map(person => person.name)
     }
-    render() {
-        console.log(this.state.names)
-        console.log(this.state.mybefore)
 
+    // "1-1-1995" => ['1','1','1995']
+    bornBefore1990 = () => {
+        console.log((this.state.data.filter(person => (parseInt(person.birthday.split('-')[2]) < 1990))));
+        return (this.state.data.filter(person => (parseInt(person.birthday.split('-')[2]) < 1990)));
+    }
+
+    render() {
         return (
             <div>
-                {this.state.names.map(x => {
-                    return <Name names={x}></Name>
-
-
+                {this.names().map(name => {
+                    return <Name name={name} key={name} />
                 })}
-                {this.state.mybefore.map(x => {
-                    return <Card name={x.name} birthday={x.birthday} favoriteFoods={x.favoriteFoods}></Card>
+                {this.bornBefore1990().map(person => {
+                    return <Card person={person} key={person.name}/>
                 })}
             </div>
-
-
-
+            
         )
-
     }
 }

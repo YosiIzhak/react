@@ -1,57 +1,15 @@
-import react from 'react';
-//import axios from 'axios';
-export default class Card extends react.Component {
-      constructor(props) {
-        super(props);
-         this.state = {
-            favoriteFoods: this.props.favoriteFoods,
-            meats: [],
-            fish: []
-        }
-    }
-    componentDidMount(){
-        this.getMeatsArrays()
-        this.getFishArrays()
-    }
-    getMeatsArrays = () =>{
-        
-        let meat = this.state.favoriteFoods.meats.map(p =>{
-            return p
-        })
-        this.setState({meats:meat})
-    }
-
-    getFishArrays = () =>{
-        let fish = this.state.favoriteFoods.fish.map(p =>{
-            return p
-        })
-        this.setState({fish:fish})
-    }
+import React, { Component } from 'react'
+import './card.css'
+export default class Card extends Component {
+    state = { person: this.props.person }
 
     render() {
         return (
-            <div>
-                
-                <div>
-                <h1>{this.props.name}</h1>
-                </div>
-                <div>
-                <h1>{this.props.birthday}</h1>
-                </div>
-
-                <div>
-                    {
-                       this.state.meats.map(p =>{
-                           return <p>{p}</p> 
-                       }) 
-                    }
-                    <hr/>
-                </div>
-                <div>
-                      {this.state.fish.map(p =>{
-                          return <p>{p}</p>
-                      })}
-                </div>
+            <div className='card'>
+                <p>Name : {this.state.person.name}</p>
+                <p>Birthday : {this.state.person.birthday}</p>
+                <p>Favorite foods (meats): {this.state.person.favoriteFoods.meats.join(', ')}</p>
+                <p>Favorite fises (fish): {this.state.person.favoriteFoods.fish.join(', ')}</p>
             </div>
         )
     }
