@@ -1,7 +1,7 @@
 import axios from 'axios';
 import react from 'react';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
+import Loader from 'react-loader-spinner';
 
 //import usersApi from './api'
 const BASE_URL = "https://605b25de27f0050017c0649d.mockapi.io/users";
@@ -10,7 +10,7 @@ export default class PersonList extends react.Component {
         super(props);
         this.state = {
             users: [],
-            id: ''
+            loading:true
         }
         this.addUser = this.addUser.bind(this);
         this.editUser = this.editUser.bind(this);
@@ -35,16 +35,19 @@ export default class PersonList extends react.Component {
       const res =  await axios.put(`${BASE_URL}/${id}`,{name:'yosi'});
       console.log(res)
     }
-
-    componentDidMount = async () => {
+    async loadData(){
         const response = await axios.get(`${BASE_URL}`)
-
         const users = response.data;
-        this.setState({ users });
-
-
-        // console.log(this.state.users)
-    };
+        this.setState({
+          loading:false,
+          users:users
+        });
+    }
+      componentDidMount(){
+        this.loadData();
+      }
+   
+   
 
 
     addUser = async () => {
@@ -54,6 +57,10 @@ export default class PersonList extends react.Component {
 
 
     render() {
+        if(this.state.loading){
+            return ( <Loader type="Circles" color="#00BFFF" height={80} width={80}/>);
+          }
+          else {
         return (
             <div>
                 {/* <Loader
@@ -99,5 +106,5 @@ export default class PersonList extends react.Component {
 
             </div>
         )
-    }
+    }}
 }
