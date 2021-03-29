@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import Todo from './components/todo18.2/todo18.2'
+import Time from './components/time18.3/time18.3'
 
 function App() {
   return(
     <div >
-      <Todo/>
+      <Time/>
    </div>
 )
 }
