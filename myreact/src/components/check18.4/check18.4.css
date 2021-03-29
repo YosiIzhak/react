@@ -1,0 +1,7 @@
+.allCheck{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    width: 7vw;
+}

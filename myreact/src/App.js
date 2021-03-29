@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import Time from './components/time18.3/time18.3'
+import Check from './components/check18.4/check18.4'
 
 function App() {
   return(
     <div >
-      <Time/>
+      <Check/>
    </div>
 )
 }
