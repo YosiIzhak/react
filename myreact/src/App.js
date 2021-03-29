@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import Read from './components/text18.1/text18.1'
+import Todo from './components/todo18.2/todo18.2'
 
 function App() {
   return(
     <div >
-      <Read/>
+      <Todo/>
    </div>
 )
 }
