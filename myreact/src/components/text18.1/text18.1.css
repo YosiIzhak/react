@@ -1,0 +1,17 @@
+.App{
+    margin: 10% 40%;
+  }
+  .read-more-link{
+    color: blueviolet;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .extra-content{
+    color: cornflowerblue;
+    font-weight: 500;
+  }
+  .first{
+    color: cornflowerblue;
+    font-weight: 500;
+  }

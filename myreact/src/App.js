@@ -1,26 +1,12 @@
-//import logo from './logo.svg';
-import React, { Component } from 'react'
-import './App.css';
+import React,{useState} from 'react';
+import Read from './components/text18.1/text18.1'
 
-
-
-
-import PersonList from './components/crud17.1/crud17.1'
-
-
-class App extends Component {
-  // constructor(props) {
-  //   super(props)
-
-  // }
-  render() {
-    return (
-      <div>
-       
-      <PersonList/>
-     
-      </div>
-    );
-  }
+function App() {
+  return(
+    <div >
+      <Read/>
+   </div>
+)
 }
-export default App
+
+export default App;
