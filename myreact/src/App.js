@@ -1,11 +1,12 @@
 import React,{useState} from 'react';
 
-import Fetch from './components/fetch19.1/fetch19.1';
+//import Country from './components/cuuntry19.2/country19.2';
+import Country from './components/cuuntry19.2/country19.2';
 
 function App() {
   return(
     <div >
-      <Fetch/>
+      <Country/>
    </div>
 )
 }
