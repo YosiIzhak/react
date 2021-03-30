@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
-import Check from './components/check18.4/check18.4'
+
+import Fetch from './components/fetch19.1/fetch19.1';
 
 function App() {
   return(
     <div >
-      <Check/>
+      <Fetch/>
    </div>
 )
 }
