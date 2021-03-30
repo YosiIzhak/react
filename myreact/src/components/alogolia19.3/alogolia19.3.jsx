@@ -3,7 +3,7 @@ import axios from 'axios'
 function Alogo() {
     const [result, setResult] = useState([]);
     const [search, setSearch] = useState('hooks')
-    const [submit, setSubmit] = useState('')
+    const [submit, setSubmit] = useState('hooks')
 
     useEffect(() => {
         const req = async () => {
@@ -30,7 +30,7 @@ function Alogo() {
     return (
         <div className="app">
             <label>Search</label>
-            <input type={'text'} value={search} onChange={(e)=>{mySearch(e)}} />
+            <input type={'text'} value={submit} onChange={(e)=>{mySearch(e)}} />
             <input type={'button'} value='click' onClick={GetSubmit} />
             {
              result.map((x,index) => {
