@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 
 
-import Cancel from './components/cancel20.1/cancel20.1';
+import Edit from './components/edit21.1/edit21.1';
 
 function App() {
   return(
     <div >
-      <Cancel/>
+      <Edit/>
    </div>
 )
 }
