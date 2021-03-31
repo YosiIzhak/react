@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 
-//import Country from './components/cuuntry19.2/country19.2';
-import Alogo from './components/alogolia19.3/alogolia19.3';
+
+import Cancel from './components/cancel20.1/cancel20.1';
 
 function App() {
   return(
     <div >
-      <Alogo/>
+      <Cancel/>
    </div>
 )
 }
