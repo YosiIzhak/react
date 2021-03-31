@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 
 
-import Video from './components/video21.2/video21.2';
+import Image from './components/image21.3/image21.3';
 
 function App() {
   return(
     <div >
-      <Video/>
+      <Image/>
    </div>
 )
 }
