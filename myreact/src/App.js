@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 
 
-import Edit from './components/edit21.1/edit21.1';
+import Video from './components/video21.2/video21.2';
 
 function App() {
   return(
     <div >
-      <Edit/>
+      <Video/>
    </div>
 )
 }
